@@ -1,0 +1,31 @@
+:root {
+   --color-primary: #ec1500;
+   --color-light: #ffffff;
+   --color-dark: #050409;
+}
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+a {
+   text-decoration: none;
+   color: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+   font-weight: 900;
+}
+body {
+   scroll-behavior: smooth;
+   font-size: 100%;
+}
