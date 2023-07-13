@@ -26,6 +26,212 @@ h5 {
    font-weight: 900;
 }
 body {
+   font-family: "Montserrat", sans-serif;
    scroll-behavior: smooth;
    font-size: 100%;
+}
+
+/* ======================= BUTTON ======================= */
+
+.button {
+   display: flex;
+   align-items: center;
+   background-color: var(--color-light);
+   color: var(--color-dark);
+   border: none;
+   font-size: 14px;
+   padding: 10px 25px;
+   gap: 10px;
+   transition: all 300ms;
+   text-transform: uppercase;
+}
+.button:hover {
+   background-color: var(--color-dark);
+   color: var(--color-light);
+}
+.button:hover img {
+   transition: all 300ms;
+}
+.button:hover img {
+   filter: brightness(0) invert(1);
+}
+
+.button--2 {
+   background-color: var(--color-dark);
+   color: var(--color-light);
+}
+.button--2:hover {
+   background-color: var(--color-light);
+   color: var(--color-dark);
+}
+.button--2:hover img {
+   filter: invert(1);
+}
+/* ======================= HEADER ======================= */
+.header {
+   width: 100%;
+   padding: 2rem 0px;
+   position: fixed;
+   left: 0;
+   top: 0;
+   z-index: 20;
+   color: #fff;
+}
+.header__logo {
+   font-size: 36px;
+   font-weight: 900;
+}
+.nav__link {
+   padding: 0.625rem;
+   color: #fff;
+   font-size: 14px;
+   font-weight: 900;
+   transition: all 300ms;
+}
+.nav__link:hover,
+.nav__link.active {
+   color: var(--color-primary);
+}
+@media screen and (max-width: 767px) {
+   .nav {
+      position: fixed;
+      background: #000000db;
+      height: 100%;
+      top: 0;
+      padding: 1rem;
+      width: 100%;
+      right: -100%;
+      transition: right 600ms;
+   }
+   .nav.active {
+      right: 0;
+   }
+   .nav.active + .nav__burger {
+      background-image: url(../media/icons/close.svg);
+   }
+   .nav__burger {
+      z-index: 10;
+      position: relative;
+      width: 30px;
+      height: 30px;
+      border: none;
+      background-color: transparent;
+      background-image: url(../media/icons/menu.svg);
+   }
+   .nav ul {
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+   .nav__link {
+      font-size: 2.5rem;
+   }
+}
+/* ======================== HERO ======================== */
+
+.bg-hero {
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+}
+.bg-hero img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: 70% center;
+}
+
+.hero__title {
+   font-size: 3.5625rem;
+   max-width: 734px;
+   color: var(--color-light);
+   line-height: 1.2;
+   text-transform: uppercase;
+}
+
+/* social  */
+.row-social-bar {
+   position: absolute;
+   bottom: 2.5rem;
+   right: 0;
+}
+.row-social-bar img {
+   transition: transform 300ms;
+}
+.row-social-bar img:hover {
+   transform: scale(1.2);
+}
+@media screen and (max-width: 992px) {
+   .hero__title {
+      font-size: 2.2rem;
+   }
+}
+/* ======================== VIDEO ======================= */
+.wrapper-video {
+   position: relative;
+   width: 100%;
+   height: 100vh;
+}
+.wrapper-video video {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+.wrapper-video::after {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: #00000025;
+   pointer-events: none;
+}
+.icon-play {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 1;
+   pointer-events: none;
+}
+
+/* ===================== FULLPAGE.JS ==================== */
+#fp-nav.fp-right {
+   right: 40px;
+   z-index: 10;
+}
+#fp-nav ul {
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+}
+#fp-nav ul li {
+   width: auto;
+   height: auto;
+   margin: 0;
+}
+#fp-nav ul li a span,
+#fp-nav ul li:hover a span {
+   background-color: var(--color-light);
+   width: 14px;
+   height: 14px;
+   margin: 0;
+}
+#fp-nav ul li:hover a span {
+   background-color: var(--color-primary);
+}
+#fp-nav ul li a.active span,
+#fp-nav ul li:hover a.active span {
+   width: 14px;
+   height: 14px;
+   margin: 0;
+   background-color: var(--color-primary);
 }
